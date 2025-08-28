@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang - TaniPedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="tentangkami.css">
+    <!-- Tambahkan AOS untuk animasi -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-seedling text-green-600 text-2xl"></i>
+                    <span class="text-2xl font-bold text-green-600">TaniPedia</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-green-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../Beranda/index.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Beranda</a>
+                    <a href="../Produk/produk.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Produk</a>
+                    <a href="../Edukasi/edukasi.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Edukasi</a>
+                    <a href="tentangkami.html" class="text-green-600 font-medium transition-colors">Tentang kami</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="../Beranda/index.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Beranda</a>
+                    <a href="../Produk/produk.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Produk</a>
+                    <a href="../Edukasi/edukasi.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Edukasi</a>
+                    <a href="tentangkami.html" class="text-green-600 font-medium py-2">Tentang kami</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-green-600 to-green-500 text-white py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down">
+                    <i class="fas fa-info-circle mr-3"></i>
+                    Tentang TaniPedia
+                </h1>
+                <p class="text-xl max-w-3xl mx-auto" data-aos="fade-up">
+                    Menghubungkan petani langsung dengan pedagang untuk pertanian Indonesia yang lebih maju
+                </p>
+            </div>
+        </section>
+
+        <!-- Tentang Kami Section -->
+        <section id="tentang" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+                        Siapa Kami?
+                    </h2>
+                    
+                    <div class="bg-green-50 rounded-xl p-8 mb-12 shadow-sm">
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <span class="font-bold text-green-600">TaniPedia</span> adalah platform digital yang menghubungkan pedagang pasar tradisional dan warung 
+                            dengan petani lokal. Kami hadir untuk memotong rantai distribusi yang panjang, sehingga petani 
+                            mendapat harga yang lebih baik dan pedagang mendapat produk segar berkualitas langsung dari sumbernya.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        <!-- Misi -->
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bullseye text-green-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Misi Kami</h3>
+                            <p class="text-gray-600 text-center">Memberdayakan petani lokal dan memudahkan akses pedagang ke produk segar berkualitas dengan harga terjangkau.</p>
+                        </div>
+                        
+                        <!-- Visi -->
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-eye text-blue-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Visi Kami</h3>
+                            <p class="text-gray-600 text-center">Menjadi platform terdepan yang menghubungkan petani dan pedagang di seluruh Indonesia pada tahun 2030.</p>
+                        </div>
+                        
+                        <!-- Nilai -->
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-heart text-yellow-600 text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4 text-center text-gray-800">Nilai Kami</h3>
+                            <p class="text-gray-600 text-center">Transparansi, keadilan, keberlanjutan, dan kemitraan dalam setiap transaksi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">
+                    Perjalanan Kami
+                </h2>
+                
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Garis timeline -->
+                    <div class="absolute left-1/2 w-1 h-full bg-green-200 transform -translate-x-1/2" data-aos="fade-up"></div>
+                    
+                    <!-- Item timeline -->
+                    <div class="mb-12" data-aos="fade-right">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+                                <h3 class="text-xl font-bold text-green-600">2020</h3>
+                                <p class="text-gray-600">Pendirian TaniPedia</p>
+                            </div>
+                            <div class="w-6 h-6 rounded-full bg-green-600 border-4 border-white mx-auto md:mx-0 relative z-10"></div>
+                            <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <p>Dimulai sebagai startup kecil di Bekasi dengan 10 petani mitra dan 5 pedagang.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item timeline -->
+                    <div class="mb-12" data-aos="fade-left">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <p>Meluncurkan aplikasi mobile dan menambah fitur pembayaran digital.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 rounded-full bg-green-600 border-4 border-white mx-auto md:mx-0 relative z-10"></div>
+                            <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                                <h3 class="text-xl font-bold text-green-600">2021</h3>
+                                <p class="text-gray-600">Ekspansi Teknologi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item timeline -->
+                    <div class="mb-12" data-aos="fade-right">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+                                <h3 class="text-xl font-bold text-green-600">2022</h3>
+                                <p class="text-gray-600">Ekspansi Regional</p>
+                            </div>
+                            <div class="w-6 h-6 rounded-full bg-green-600 border-4 border-white mx-auto md:mx-0 relative z-10"></div>
+                            <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <p>Berkembang ke 5 provinsi di Jawa dengan 500+ petani mitra dan 200+ pedagang.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item timeline -->
+                    <div class="mb-12" data-aos="fade-left">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+                                <div class="bg-white p-6 rounded-lg shadow-md">
+                                    <p>Menerima penghargaan "Startup Agritech Terbaik" dari Kementerian Pertanian.</p>
+                                </div>
+                            </div>
+                            <div class="w-6 h-6 rounded-full bg-green-600 border-4 border-white mx-auto md:mx-0 relative z-10"></div>
+                            <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                                <h3 class="text-xl font-bold text-green-600">2023</h3>
+                                <p class="text-gray-600">Penghargaan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">
+                    Tim Kami
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Anggota Tim 1 -->
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100 shadow-md">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-1 text-gray-800">Budi Santoso</h3>
+                        <p class="text-green-600 font-medium mb-3">CEO & Pendiri</p>
+                        <p class="text-gray-600">Mantan petani yang ingin menciptakan solusi untuk masalah distribusi hasil pertanian.</p>
+                    </div>
+                    
+                    <!-- Anggota Tim 2 -->
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100 shadow-md">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="CTO" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-1 text-gray-800">Dewi Kartini</h3>
+                        <p class="text-green-600 font-medium mb-3">CTO</p>
+                        <p class="text-gray-600">Ahli teknologi dengan passion di bidang agritech dan solusi berkelanjutan.</p>
+                    </div>
+                    
+                    <!-- Anggota Tim 3 -->
+                    <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-green-100 shadow-md">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="CMO" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold mb-1 text-gray-800">Agus Prasetyo</h3>
+                        <p class="text-green-600 font-medium mb-3">CMO</p>
+                        <p class="text-gray-600">Spesialis pemasaran dengan pengalaman 10 tahun di bidang FMCG dan pertanian.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-16 bg-green-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">
+                    Apa Kata Mereka?
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md" data-aos="flip-left">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Petani" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Pak Joko</h4>
+                                <p class="text-sm text-green-600">Petani Bawang, Brebes</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">
+                            "Sejak bergabung dengan TaniPedia, hasil panen saya langsung terjual dengan harga yang lebih baik. Tidak perlu khawatir dengan tengkulak lagi."
+                        </p>
+                        <div class="mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md" data-aos="flip-right">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Pedagang" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Bu Siti</h4>
+                                <p class="text-sm text-green-600">Pedagang Pasar, Jakarta</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">
+                            "Produk dari TaniPedia selalu segar dan harganya kompetitif. Sekarang saya bisa dapat supply langsung dari petani tanpa perantara."
+                        </p>
+                        <div class="mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12" data-aos="fade-up">
+                    <i class="fas fa-phone text-green-600 mr-3"></i>
+                    Hubungi Kami
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">Informasi Kontak</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Telepon</p>
+                                    <p class="text-gray-600">+62 821-1234-5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p class="text-gray-600">info@TaniPedia.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Alamat</p>
+                                    <p class="text-gray-600">Jl. Pertanian No. 123, Bekasi, Jawa Barat</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold mb-4">Ikuti Kami</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition-colors">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-bold mb-6">Kirim Pesan</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Nama</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" placeholder="Masukkan email Anda" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Pesan</label>
+                                <textarea id="contact-message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500" placeholder="Tulis pesan Anda" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary w-full">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-seedling text-green-400 text-2xl"></i>
+                        <span class="text-2xl font-bold">TaniPedia</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Menghubungkan pedagang dengan petani lokal untuk ekonomi yang lebih adil dan berkelanjutan.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="../Produk/produk.html" class="text-gray-300 hover:text-white transition-colors">Produk</a></li>
+                        <li><a href="../Edukasi/edukasi.html" class="text-gray-300 hover:text-white transition-colors">Edukasi</a></li>
+                        <li><a href="../Tentangkami/tentangkami.html" class="text-gray-300 hover:text-white transition-colors">Tentang kami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Untuk Pedagang</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Untuk Petani</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Bantuan</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            +62 821-1234-5678
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@TaniPedia.com
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Bekasi, Jawa Barat
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-clock mr-2"></i>
+                            Senin-Jumat: 08.00-17.00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 TaniPedia. Dibuat untuk menghubungkan pedagang dan petani lokal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6282112345678" target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-200 z-50 animate-pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 text-center">
+            <i class="fas fa-spinner fa-spin text-green-600 text-3xl mb-4"></i>
+            <p class="text-gray-600">Memuat...</p>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed top-4 right-4 p-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 hidden">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span id="notification-text">Operasi berhasil!</span>
+        </div>
+    </div>
+
+    <script src="../Tentangkami/tentangkami.js"></script>
+    <!-- Tambahkan AOS untuk animasi -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>

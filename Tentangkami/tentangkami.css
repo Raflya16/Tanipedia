@@ -1,0 +1,595 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== CUSTOM VARIABLES ===== */
+:root {
+    --primary-green: #16a34a;
+    --primary-green-dark: #15803d;
+    --primary-green-light: #22c55e;
+    --secondary-green: #dcfce7;
+    --accent-yellow: #fbbf24;
+    --accent-blue: #3b82f6;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid var(--text-dark);
+    }
+    
+    .btn-primary {
+        border: 2px solid white;
+    }
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-green);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-green-dark);
+}
+
+/* ===== SELECTION STYLES ===== */
+::selection {
+    background: var(--primary-green);
+    color: white;
+}
+
+::-moz-selection {
+    background: var(--primary-green);
+    color: white;
+}
+
+/* componentnya */
+
+/* ===== UTILITY CLASSES ===== */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-medium);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-large);
+    background: linear-gradient(135deg, var(--primary-green-dark), var(--primary-green));
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-large);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== GRADIENT BACKGROUNDS ===== */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-light) 50%, #10b981 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== NAVIGATION STYLES ===== */
+nav {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-green);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* ===== PRODUCT CARDS ===== */
+.product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.6s;
+}
+
+.product-card:hover::before {
+    left: 100%;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 4/3;
+    background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.price-tag {
+    background: linear-gradient(135deg, var(--accent-yellow), #f59e0b);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+.availability-badge {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.availability-badge.low-stock {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.availability-badge.out-of-stock {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* ===== FARMER STORY CARDS ===== */
+.farmer-card {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.farmer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-large);
+}
+
+.farmer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--shadow-medium);
+    background: linear-gradient(45deg, var(--primary-green), var(--primary-green-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    z-index: 10;
+}
+
+/* ===== NOTIFICATION STYLES ===== */
+#notification {
+    backdrop-filter: blur(10px);
+    border-left: 4px solid white;
+}
+
+#notification.success {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+}
+
+#notification.error {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+#notification.warning {
+    background: linear-gradient(135deg, var(--accent-yellow), #f59e0b);
+    color: #1f2937;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary {
+        padding: 14px 20px;
+        font-size: 16px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .card {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .whatsapp-float,
+    #mobile-menu-btn,
+    .btn-primary,
+    .btn-secondary {
+        display: none !important;
+    }
+    
+    .gradient-bg {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* page tentangkami */
+
+/* ===== TENTANG KAMI SECTION STYLES ===== */
+#tentang {
+    padding: 4rem 0;
+}
+
+#tentang h2 {
+    margin-bottom: 2rem;
+}
+
+#tentang p.lead {
+    line-height: 1.8;
+}
+
+/* Value card styles */
+.value-card {
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ===== KONTAK SECTION STYLES ===== */
+#kontak {
+    padding: 4rem 0;
+}
+
+#kontak h2 {
+    margin-bottom: 2rem;
+}
+
+.contact-info-item {
+    transition: var(--transition);
+}
+
+.contact-info-item:hover {
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+}
+
+.social-icon {
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* Contact form styles */
+#contact-form input,
+#contact-form textarea {
+    transition: var(--transition);
+    border: 2px solid #e5e7eb;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Loading overlay styles */
+#loading-overlay {
+    backdrop-filter: blur(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #tentang, #kontak {
+        padding: 3rem 0;
+    }
+    
+    #kontak .grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #tentang h2, #kontak h2 {
+        font-size: 2rem;
+    }
+    
+    .value-card {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== ANIMASI DAN EFEK TAMBAHAN ===== */
+/* Animasi untuk timeline */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.timeline-item {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Efek hover untuk card */
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi untuk testimonial */
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient untuk hero section */
+.hero-gradient {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 50%, #10b981 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .timeline-item > div {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content {
+        order: 1;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+        order: 2;
+    }
+}
+
+/* Efek untuk team member */
+.team-member img {
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+/* Button animation */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover::after {
+    left: 100%;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}

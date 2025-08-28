@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - TaniPedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="beranda.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-seedling text-green-600 text-2xl"></i>
+                    <span class="text-2xl font-bold text-green-600">TaniPedia</span>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-green-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-green-600 font-medium transition-colors">Beranda</a>
+                    <a href="../Produk/produk.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Produk</a>
+                    <a href="../Edukasi/edukasi.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Edukasi</a>
+                    <a href="../Tentangkami/tentangkami.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Tentang kami</a>
+                    <a href="../Daftar/daftar.html" class="btn-primary text-sm px-4 py-2">
+                        <i class="fas fa-user-plus mr-1"></i>Daftar
+                    </a>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-green-600 font-medium py-2">Beranda</a>
+                    <a href="../Produk/produk.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Produk</a>
+                    <a href="../Edukasi/edukasi.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Edukasi</a>
+                    <a href="../Tentangkami/tentangkami.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Tentang</a>
+                    <a href="../Daftar/daftar.html" class="btn-primary text-center py-2">
+                        <i class="fas fa-user-plus mr-1"></i>Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="gradient-bg py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-shadow leading-tight">
+                        Produk Segar Langsung dari Petani Lokal
+                    </h1>
+                    <p class="text-xl md:text-2xl text-green-100 mb-8 max-w-2xl">
+                        Dapatkan bahan pangan berkualitas tinggi dengan harga petani, dukung perekonomian lokal Indonesia
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="../Produk/produk.html" class="btn-primary text-lg">
+                            <i class="fas fa-shopping-basket mr-2"></i>
+                            Belanja Sekarang
+                        </a>
+                        <a href="../Daftar/daftar.html" class="btn-secondary text-lg">
+                            <i class="fas fa-user-plus mr-2"></i>
+                            Gabung Sebagai Petani
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+                        <div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                            <span class="text-white text-sm">100% Produk Lokal</span>
+                        </div>
+                        <div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                            <span class="text-white text-sm">Harga Terjangkau</span>
+                        </div>
+                        <div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle text-green-300 mr-2"></i>
+                            <span class="text-white text-sm">Kualitas Terjamin</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc" alt="Petani Indonesia" class="rounded-lg shadow-2xl w-full h-auto">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-leaf text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Produk Terbaru</p>
+                                    <p class="font-bold text-green-600">Tomat Ceri Organik</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 bg-white p-4 rounded-lg shadow-lg hidden md:block">
+                            <div class="flex items-center">
+                                <div class="bg-yellow-100 p-3 rounded-full mr-3">
+                                    <i class="fas fa-star text-yellow-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500">Rating Petani</p>
+                                    <p class="font-bold text-yellow-600">4.8/5.0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-green-50 p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-green-600 mb-2">500+</div>
+                    <p class="text-gray-600">Petani Terdaftar</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-yellow-600 mb-2">1.2K+</div>
+                    <p class="text-gray-600">Produk Tersedia</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">5K+</div>
+                    <p class="text-gray-600">Transaksi Bulanan</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-xl">
+                    <div class="text-4xl font-bold text-red-600 mb-2">98%</div>
+                    <p class="text-gray-600">Kepuasan Pelanggan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-tags text-green-600 mr-3"></i>
+                    Kategori Produk
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Temukan berbagai macam produk pertanian berkualitas dari berbagai kategori
+                </p>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl">
+                    <a href="../Produk/produk.html?category=buah" class="category-card hover:bg-green-50 transition-colors">
+                        <i class="fas fa-apple-alt text-4xl mb-3"></i>
+                        <h3 class="text-lg font-semibold">Buah-buahan</h3>
+                        <p class="text-sm text-gray-600 mt-1"><span id="buah-count">0</span> produk</p>
+                    </a>
+                    <a href="../Produk/produk.html?category=sayuran" class="category-card hover:bg-green-50 transition-colors">
+                        <i class="fas fa-carrot text-4xl mb-3"></i>
+                        <h3 class="text-lg font-semibold">Sayuran</h3>
+                        <p class="text-sm text-gray-600 mt-1"><span id="sayuran-count">0</span> produk</p>
+                    </a>
+                    <a href="../Produk/produk.html?category=rempah" class="category-card hover:bg-green-50 transition-colors">
+                        <i class="fas fa-mortar-pestle text-4xl mb-3"></i>
+                        <h3 class="text-lg font-semibold">Rempah</h3>
+                        <p class="text-sm text-gray-600 mt-1"><span id="rempah-count">0</span> produk</p>
+                    </a>
+                    <a href="../Produk/produk.html?category=biji" class="category-card hover:bg-green-50 transition-colors">
+                        <i class="fas fa-seedling text-4xl mb-3"></i>
+                        <h3 class="text-lg font-semibold">Biji-bijian</h3>
+                        <p class="text-sm text-gray-600 mt-1"><span id="biji-count">0</span> produk</p>
+                    </a>
+                    <a href="../Produk/produk.html?category=limbah" class="category-card hover:bg-green-50 transition-colors">
+                        <i class="fas fa-recycle text-4xl mb-3"></i>
+                        <h3 class="text-lg font-semibold">Limbah</h3>
+                        <p class="text-sm text-gray-600 mt-1"><span id="limbah-count">0</span> produk</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="../Produk/produk.html" class="btn-secondary text-lg">
+                    <i class="fas fa-arrow-right mr-2"></i>
+                    Lihat Semua Kategori
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- Trending Products -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-fire text-red-500 mr-3"></i>
+                Produk Terlaris Minggu Ini
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Produk-produk yang paling banyak dibeli oleh pelanggan kami
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" id="trending-products">
+            <!-- Products loaded by JavaScript -->
+        </div>
+    </div>
+</section>
+
+<!-- Local Specialties -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                <i class="fas fa-award text-green-600 mr-3"></i>
+                Unggulan Lokal
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Produk-produk khas berkualitas dari berbagai daerah di Indonesia
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="farmer-stories">
+            <!-- Farmer stories loaded by JavaScript -->
+        </div>
+    </div>
+</section>
+
+    <!-- New Arrivals -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-certificate text-yellow-500 mr-3"></i>
+                    Produk Baru
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Produk-produk terbaru yang baru saja ditambahkan ke platform kami
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6" id="new-products">
+                <!-- Products loaded by JavaScript -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="../Produk/produk.html?sort=newest" class="btn-secondary text-lg">
+                    <i class="fas fa-clock mr-2"></i>
+                    Lihat Produk Terbaru Lainnya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 gradient-bg">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Siap Bergabung dengan Komunitas Petani Kami?
+            </h2>
+            <p class="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Daftarkan diri Anda sekarang dan nikmati berbagai manfaat untuk mengembangkan usaha pertanian Anda
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../Daftar/daftar.html" class="btn-primary text-lg bg-white text-green-600 hover:bg-gray-100">
+                    <i class="fas fa-user-plus mr-2"></i>
+                    Daftar Sekarang
+                </a>
+                <a href="../Tentangkami/tentangkami.html" class="btn-secondary text-lg border-white text-white hover:bg-white hover:text-green-600">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-envelope text-green-600 mr-3"></i>
+                    Dapatkan Update Terbaru
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    Berlangganan newsletter kami untuk mendapatkan informasi tentang produk baru, promo, dan tips pertanian
+                </p>
+                <form class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="Alamat email Anda" 
+                        class="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        required
+                    >
+                    <button type="submit" class="btn-primary px-6 py-3">
+                        <i class="fas fa-paper-plane mr-2"></i>Berlangganan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-seedling text-green-400 text-2xl"></i>
+                        <span class="text-2xl font-bold">TaniPedia</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Menghubungkan pedagang dengan petani lokal untuk ekonomi yang lebih adil dan berkelanjutan.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="../Produk/produk.html" class="text-gray-300 hover:text-white transition-colors">Produk</a></li>
+                        <li><a href="../Edukasi/edukasi.html" class="text-gray-300 hover:text-white transition-colors">Edukasi</a></li>
+                        <li><a href="../Tentangkami/tentangkami.html" class="text-gray-300 hover:text-white transition-colors">Tentang kami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Untuk Pedagang</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Untuk Petani</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Bantuan</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            +62 821-1234-5678
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@TaniPedia.com
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Bekasi, Jawa Barat
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-clock mr-2"></i>
+                            Senin-Jumat: 08.00-17.00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 TaniPedia. Dibuat untuk menghubungkan pedagang dan petani lokal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6282112345678" target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-200 z-50 animate-pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    
+    <!-- Notification Toast -->
+    <div id="notification" class="fixed top-4 right-4 p-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 hidden">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span id="notification-text">Operasi berhasil!</span>
+        </div>
+    </div>
+    
+    <script src="../Produk/produk.js"></script>
+    <script src="beranda.js"></script>
+</body>
+</html>

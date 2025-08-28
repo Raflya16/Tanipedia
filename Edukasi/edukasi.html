@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi - TaniPedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="edukasi.css">
+</head>
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-seedling text-green-600 text-2xl"></i>
+                    <span class="text-2xl font-bold text-green-600">TaniPedia</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-green-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="../Beranda/index.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Beranda</a>
+                    <a href="../Produk/produk.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Produk</a>
+                    <a href="edukasi.html" class="text-green-600 font-medium transition-colors">Edukasi</a>
+                    <a href="../Tentangkami/tentangkami.html" class="text-gray-600 hover:text-green-600 font-medium transition-colors">Tentang kami</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="../Beranda/index.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Beranda</a>
+                    <a href="../Produk/produk.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Produk</a>
+                    <a href="edukasi.html" class="text-green-600 font-medium py-2">Edukasi</a>
+                    <a href="../Tentangkami/tentangkami.html" class="text-gray-600 hover:text-green-600 font-medium py-2">Tentang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+    <!-- Edukasi & Berita Section -->
+    <section id="edukasi" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+                <i class="fas fa-graduation-cap text-blue-600 mr-3"></i>
+                Edukasi & Tips
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6 hover:border-green-500 transition-colors">
+                    <div class="icon-container bg-blue-50">
+                        <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Cara Memesan dari Petani</h3>
+                    <p class="text-gray-600 mb-6">Panduan lengkap untuk pedagang dalam memesan hasil bumi langsung dari petani lokal.</p>
+                    <button class="education-btn" data-topic="cara-memesan">
+                        Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="card p-6 hover:border-green-500 transition-colors">
+                    <div class="icon-container bg-green-50">
+                        <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Tips Tawar Harga yang Baik</h3>
+                    <p class="text-gray-600 mb-6">Strategi negosiasi yang menguntungkan kedua belah pihak antara pedagang dan petani.</p>
+                    <button class="education-btn" data-topic="tips-harga">
+                        Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="card p-6 hover:border-green-500 transition-colors">
+                    <div class="icon-container bg-yellow-50">
+                        <i class="fas fa-truck text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Manajemen Pengiriman</h3>
+                    <p class="text-gray-600 mb-6">Tips mengatur jadwal pengiriman dan penyimpanan produk segar dari petani.</p>
+                    <button class="education-btn" data-topic="pengiriman">
+                        Baca Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-seedling text-green-400 text-2xl"></i>
+                        <span class="text-2xl font-bold">TaniPedia</span>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Menghubungkan pedagang dengan petani lokal untuk ekonomi yang lebih adil dan berkelanjutan.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Beranda</a></li>
+                        <li><a href="../Produk/produk.html" class="text-gray-300 hover:text-white transition-colors">Produk</a></li>
+                        <li><a href="../Edukasi/edukasi.html" class="text-gray-300 hover:text-white transition-colors">Edukasi</a></li>
+                        <li><a href="../Tentangkami/tentangkami.html" class="text-gray-300 hover:text-white transition-colors">Tentang kami</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Untuk Pedagang</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Untuk Petani</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Bantuan</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Kontak</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            +62 821-1234-5678
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@TaniPedia.com
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            Bekasi, Jawa Barat
+                        </li>
+                        <li class="text-gray-300">
+                            <i class="fas fa-clock mr-2"></i>
+                            Senin-Jumat: 08.00-17.00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 TaniPedia. Dibuat untuk menghubungkan pedagang dan petani lokal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/6282112345678" target="_blank" 
+       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-200 z-50 animate-pulse">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+   <!-- Notification Toast -->
+    <div id="notification" class="fixed top-4 right-4 p-4 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 z-50 hidden">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span id="notification-text">Operasi berhasil!</span>
+        </div>
+    </div>
+
+    <script src="../Edukasi/edukasi.js"></script>
+</body>
+</html>
